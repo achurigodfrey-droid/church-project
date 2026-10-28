@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mass Schedule — Riabore Catholic Church</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <div class="logo">
+        <div class="logo-icon"><i class="fas fa-cross"></i></div>
+        <div class="logo-text">
+          <span class="church-name">Riabore Catholic Church</span>
+          <span class="church-sub">Diocese of Kisii</span>
+        </div>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="schedule.html" class="active">Mass Schedule</a></li>
+        <li><a href="live.html">Live Mass</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="live.html" class="btn-join">Join Online</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="page-header-overlay"></div>
+    <div class="container">
+      <h1>Mass Schedule</h1>
+      <p>All are welcome. Come and worship with us.</p>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Mass Schedule</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Weekly Schedule -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header">
+        <h2>Weekly Mass Times</h2>
+        <p>Masses marked <span class="tag-live">LIVE</span> are streamed online at <a href="live.html" style="color:#c9a84c">riaborecatholic.org/live</a></p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="tab-bar" id="scheduleTabs" role="tablist" aria-label="Filter schedule">
+        <button class="tab-btn tab-active" data-filter="all" role="tab" aria-selected="true">All Masses</button>
+        <button class="tab-btn" data-filter="sunday"   role="tab" aria-selected="false">Sunday</button>
+        <button class="tab-btn" data-filter="weekday"  role="tab" aria-selected="false">Weekdays</button>
+        <button class="tab-btn" data-filter="saturday" role="tab" aria-selected="false">Saturday</button>
+        <button class="tab-btn" data-filter="live"     role="tab" aria-selected="false">
+          <span class="pulse-red">●</span> Online Only
+        </button>
+      </div>
+
+      <div class="schedule-table-wrap">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Time</th>
+              <th>Mass</th>
+              <th>Language</th>
+              <th>Online</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="sunday-row">
+              <td rowspan="4" class="day-cell"><strong>Sunday</strong></td>
+              <td>7:00 AM</td>
+              <td>Early Morning Mass</td>
+              <td>English</td>
+              <td>—</td>
+              <td>
+                <button class="reminder-toggle" data-mass="Sunday 7:00 AM Mass" title="Set reminder">
+                  <i class="far fa-bell"></i> Set Reminder
+                </button>
+              </td>
+            </tr>
+            <tr class="sunday-row">
+              <td>9:00 AM</td>
+              <td>Family Mass <span class="tag-live">LIVE</span></td>
+              <td>English / Ekegusii</td>
+              <td><a href="live.html" class="watch-link"><i class="fas fa-play-circle"></i> Watch</a></td>
+              <td class="action-cell">
+                <button class="reminder-toggle" data-mass="Sunday 9:00 AM Live Mass" title="Set reminder">
+                  <i class="far fa-bell"></i> Set Reminder
+                </button>
+                <button class="add-to-cal btn-cal" title="Add to Google Calendar"
+                  data-title="Riabore Catholic Church — Sunday Family Mass"
+                  data-details="Join live at riaborecatholic.org/live.html"
+                  data-location="Riabore, Kisii County, Kenya"
+                  data-start="20261101T090000" data-end="20261101T100000">
+                  <i class="fas fa-calendar-plus"></i> Add to Calendar
+                </button>
+              </td>
+            </tr>
+            <tr class="sunday-row">
+              <td>11:00 AM</td>
+              <td>Youth Mass</td>
+              <td>English</td>
+              <td>—</td>
+              <td>
+                <button class="reminder-toggle" data-mass="Sunday 11:00 AM Youth Mass" title="Set reminder">
+                  <i class="far fa-bell"></i> Set Reminder
+                </button>
+              </td>
+            </tr>
+            <tr class="sunday-row">
+              <td>6:00 PM</td>
+              <td>Evening Mass</td>
+              <td>English</td>
+              <td>—</td>
+              <td>
+                <button class="reminder-toggle" data-mass="Sunday 6:00 PM Evening Mass">
+                  <i class="far fa-bell"></i> Set Reminder
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2"><strong>Monday–Friday</strong></td>
+              <td>6:30 AM</td>
+              <td>Morning Mass</td>
+              <td>English</td>
+              <td>—</td>
+              <td>
+                <button class="reminder-toggle" data-mass="Weekday 6:30 AM Morning Mass">
+                  <i class="far fa-bell"></i> Set Reminder
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>12:15 PM</td>
+              <td>Midday Mass</td>
+              <td>English</td>
+              <td>—</td>
+              <td>
+                <button class="reminder-toggle" data-mass="Weekday 12:15 PM Midday Mass">
+                  <i class="far fa-bell"></i> Set Reminder
+                </button>
+              </td>
+            </tr>
+            <tr class="saturday-row">
+              <td rowspan="2"><strong>Saturday</strong></td>
+              <td>8:00 AM</td>
+              <td>Morning Mass</td>
+              <td>English</td>
+              <td>—</td>
+              <td>
+                <button class="reminder-toggle" data-mass="Saturday 8:00 AM Morning Mass">
+                  <i class="far fa-bell"></i> Set Reminder
+                </button>
+              </td>
+            </tr>
+            <tr class="saturday-row">
+              <td>5:00 PM</td>
+              <td>Vigil Mass</td>
+              <td>English / Ekegusii</td>
+              <td>—</td>
+              <td>
+                <button class="reminder-toggle" data-mass="Saturday 5:00 PM Vigil Mass">
+                  <i class="far fa-bell"></i> Set Reminder
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sacraments Schedule -->
+  <section class="section-pad bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Sacraments &amp; Services</h2>
+      </div>
+      <div class="sacraments-grid">
+        <div class="sacrament-card">
+          <div class="sac-icon"><i class="fas fa-water"></i></div>
+          <h3>Baptism</h3>
+          <p>Celebrated on the first Sunday of every month at the 11:00 AM Mass. Contact the parish office to register.</p>
+          <a href="contact.html" class="card-link">Register <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="sacrament-card">
+          <div class="sac-icon"><i class="fas fa-ring"></i></div>
+          <h3>Matrimony</h3>
+          <p>Couples must register at least 6 months in advance. Pre-Cana preparation is required.</p>
+          <a href="contact.html" class="card-link">Inquire <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="sacrament-card">
+          <div class="sac-icon"><i class="fas fa-pray"></i></div>
+          <h3>Confession</h3>
+          <p>Every Saturday: 4:00 PM – 4:45 PM. By appointment with the parish priests at any other time.</p>
+          <a href="contact.html" class="card-link">Book Appointment <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="sacrament-card">
+          <div class="sac-icon"><i class="fas fa-oil-can"></i></div>
+          <h3>Anointing of the Sick</h3>
+          <p>Contact the parish office immediately for the sick and dying. Home and hospital visits available.</p>
+          <a href="contact.html" class="card-link">Contact Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Events Calendar -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header">
+        <h2>Upcoming Special Events</h2>
+        <p>Mark your calendar for these special liturgical celebrations</p>
+      </div>
+      <div class="events-list">
+        <div class="event-item">
+          <div class="event-date-box"><span class="event-day">1</span><span class="event-month">NOV</span></div>
+          <div class="event-info">
+            <h3>All Saints Day <span class="tag-live">LIVE</span></h3>
+            <p><i class="fas fa-clock"></i> 7:00 AM | 10:00 AM | 6:00 PM</p>
+            <p>Solemnity of All Saints — a holy day of obligation. Join us in person or <a href="live.html">online</a>.</p>
+            <div class="event-actions">
+              <button class="add-to-cal btn-cal"
+                data-title="All Saints Day Mass — Riabore Catholic Church"
+                data-details="Holy Day of Obligation. Join live at riaborecatholic.org/live.html"
+                data-location="Riabore, Kisii County, Kenya"
+                data-start="20261101T070000" data-end="20261101T080000">
+                <i class="fas fa-calendar-plus"></i> Add to Calendar
+              </button>
+              <button class="reminder-toggle" data-mass="All Saints Day Mass — Nov 1">
+                <i class="far fa-bell"></i> Set Reminder
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="event-item">
+          <div class="event-date-box"><span class="event-day">2</span><span class="event-month">NOV</span></div>
+          <div class="event-info">
+            <h3>All Souls Day</h3>
+            <p><i class="fas fa-clock"></i> 6:30 AM | 12:15 PM</p>
+            <p>Commemoration of All the Faithful Departed. Bring your list of deceased loved ones for the prayer.</p>
+            <div class="event-actions">
+              <button class="add-to-cal btn-cal"
+                data-title="All Souls Day Mass — Riabore Catholic Church"
+                data-details="Commemoration of All the Faithful Departed"
+                data-location="Riabore, Kisii County, Kenya"
+                data-start="20261102T063000" data-end="20261102T073000">
+                <i class="fas fa-calendar-plus"></i> Add to Calendar
+              </button>
+              <button class="reminder-toggle" data-mass="All Souls Day Mass — Nov 2">
+                <i class="far fa-bell"></i> Set Reminder
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="event-item">
+          <div class="event-date-box"><span class="event-day">8</span><span class="event-month">DEC</span></div>
+          <div class="event-info">
+            <h3>Immaculate Conception <span class="tag-live">LIVE</span></h3>
+            <p><i class="fas fa-clock"></i> 7:00 AM | 10:00 AM | 6:00 PM</p>
+            <p>Solemnity of the Immaculate Conception of the Blessed Virgin Mary. Holy day of obligation.</p>
+            <div class="event-actions">
+              <button class="add-to-cal btn-cal"
+                data-title="Immaculate Conception Mass — Riabore Catholic Church"
+                data-details="Solemnity of the Immaculate Conception. Join live at riaborecatholic.org/live.html"
+                data-location="Riabore, Kisii County, Kenya"
+                data-start="20261208T070000" data-end="20261208T080000">
+                <i class="fas fa-calendar-plus"></i> Add to Calendar
+              </button>
+              <button class="reminder-toggle" data-mass="Immaculate Conception Mass — Dec 8">
+                <i class="far fa-bell"></i> Set Reminder
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="event-item">
+          <div class="event-date-box"><span class="event-day">25</span><span class="event-month">DEC</span></div>
+          <div class="event-info">
+            <h3>Christmas Day <span class="tag-live">LIVE</span></h3>
+            <p><i class="fas fa-clock"></i> Midnight | 7:00 AM | 10:00 AM | 12:00 PM</p>
+            <p>The Nativity of Our Lord Jesus Christ. Special choir and Christmas celebration for all.</p>
+            <div class="event-actions">
+              <button class="add-to-cal btn-cal"
+                data-title="Christmas Day Mass — Riabore Catholic Church"
+                data-details="The Nativity of Our Lord. Join live at riaborecatholic.org/live.html"
+                data-location="Riabore, Kisii County, Kenya"
+                data-start="20261225T070000" data-end="20261225T080000">
+                <i class="fas fa-calendar-plus"></i> Add to Calendar
+              </button>
+              <button class="reminder-toggle" data-mass="Christmas Day Mass — Dec 25">
+                <i class="far fa-bell"></i> Set Reminder
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container cta-inner">
+      <div class="cta-text">
+        <h2>Can't Attend in Person?</h2>
+        <p>Our online platform streams the Sunday 9:00 AM Mass live every week. Never miss a Mass again.</p>
+      </div>
+      <a href="live.html" class="btn btn-primary btn-lg"><i class="fas fa-video"></i> Watch Live Mass</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="logo">
+          <div class="logo-icon"><i class="fas fa-cross"></i></div>
+          <div class="logo-text">
+            <span class="church-name">Riabore Catholic Church</span>
+            <span class="church-sub">Diocese of Kisii</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="schedule.html">Mass Schedule</a></li>
+          <li><a href="live.html">Live Mass</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Riabore, Kisii County, Kenya</li>
+          <li><i class="fas fa-phone"></i> +254 700 000 000</li>
+          <li><i class="fas fa-envelope"></i> info@riaborecatholic.org</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Riabore Catholic Church. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

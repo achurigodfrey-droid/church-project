@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Mass — Riabore Catholic Church</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body class="live-page">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-dark">
+    <div class="container nav-inner">
+      <div class="logo">
+        <div class="logo-icon"><i class="fas fa-cross"></i></div>
+        <div class="logo-text">
+          <span class="church-name">Riabore Catholic Church</span>
+          <span class="church-sub">Diocese of Kisii</span>
+        </div>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="schedule.html">Mass Schedule</a></li>
+        <li><a href="live.html" class="active">Live Mass</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <!-- Notification bell with badge -->
+          <button class="icon-btn notif-btn" id="notifBtn" title="Notifications" aria-label="Notifications">
+            <i class="fas fa-bell"></i>
+            <span class="notif-badge" id="notifBadge" style="display:none">0</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Live Hero Bar -->
+  <div class="live-hero-bar">
+    <div class="container live-hero-inner">
+      <div class="live-indicator">
+        <span class="live-dot"></span>
+        <span class="live-label">LIVE NOW</span>
+      </div>
+      <h1 class="live-title">Sunday 9:00 AM Holy Mass</h1>
+      <p class="live-sub">Riabore Catholic Church — Join us from wherever you are</p>
+    </div>
+  </div>
+
+  <!-- Main Live Area -->
+  <div class="live-layout container">
+
+    <!-- Left: Video + Participation -->
+    <div class="live-main">
+
+      <!-- Video Player -->
+      <div class="video-wrapper">
+        <iframe
+          id="liveStream"
+          src="https://www.youtube.com/embed/live_stream?channel=UCXXXXXXXXyourChannelID&autoplay=1"
+          title="Riabore Catholic Church Live Mass"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="video-overlay" id="videoOverlay">
+          <div class="video-overlay-content">
+            <i class="fas fa-church"></i>
+            <h2>Welcome to Live Mass</h2>
+            <p>The 9:00 AM Sunday Mass is streaming now.<br>Press <kbd>Join</kbd> or log in below to participate.</p>
+            <button class="btn btn-gold" onclick="startStream()">
+              <i class="fas fa-play"></i> Join the Mass
+            </button>
+            <p class="overlay-hint">Keyboard shortcut: press <kbd>J</kbd> to join instantly</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Viewer Info Bar -->
+      <div class="viewer-bar">
+        <div class="viewer-count">
+          <i class="fas fa-eye"></i>
+          <span id="viewerCount">248</span> watching now
+        </div>
+        <div class="mass-status">
+          <span class="status-badge status-live">● LIVE</span>
+          <span class="mass-part" id="massPart">Liturgy of the Word</span>
+        </div>
+        <div class="viewer-actions">
+          <!-- Quality selector injected by live.js -->
+          <button class="icon-btn" title="Share Mass" onclick="shareMass()" aria-label="Share">
+            <i class="fas fa-share-alt"></i>
+          </button>
+          <button class="icon-btn" title="Fullscreen" onclick="goFullscreen()" aria-label="Fullscreen">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mass Order of Service (rendered by live.js) -->
+      <div class="order-of-service">
+        <h3><i class="fas fa-scroll"></i> Order of Mass
+          <span class="order-tip">Click any step to learn more</span>
+        </h3>
+        <div class="order-steps">
+          <!-- Injected by live.js renderMassStages() -->
+        </div>
+      </div>
+
+      <!-- Today's Readings -->
+      <div class="readings-section">
+        <h3><i class="fas fa-bible"></i> Today's Readings</h3>
+        <div class="readings-grid">
+          <div class="reading-card">
+            <span class="reading-label">First Reading</span>
+            <h4>Sirach 35:15-17, 20-22</h4>
+            <p class="reading-preview">The Lord is a God of justice, who knows no favorites...</p>
+            <button class="btn-read" onclick="toggleReading('first')">Read Full <i class="fas fa-chevron-down"></i></button>
+            <div class="reading-text" id="first" style="display:none">
+              <p>The Lord is a God of justice, who knows no favorites. Though not unduly partial toward the weak, yet he hears the cry of the oppressed. The Lord is not deaf to the wail of the orphan, nor to the widow when she pours out her complaint. The one who serves God willingly is heard; his petition reaches the heavens. The prayer of the lowly pierces the clouds; it does not rest till it reaches its goal, nor will it withdraw till the Most High responds...</p>
+            </div>
+          </div>
+          <div class="reading-card">
+            <span class="reading-label">Second Reading</span>
+            <h4>2 Timothy 4:6-8, 16-18</h4>
+            <p class="reading-preview">I have competed well; I have finished the race...</p>
+            <button class="btn-read" onclick="toggleReading('second')">Read Full <i class="fas fa-chevron-down"></i></button>
+            <div class="reading-text" id="second" style="display:none">
+              <p>I am already being poured out like a libation, and the time of my departure is at hand. I have competed well; I have finished the race; I have kept the faith. From now on the crown of righteousness awaits me, which the Lord, the just judge, will award to me on that day, and not only to me, but to all who have longed for his appearance...</p>
+            </div>
+          </div>
+          <div class="reading-card gospel">
+            <span class="reading-label gospel-label">Holy Gospel</span>
+            <h4>Luke 18:9-14</h4>
+            <p class="reading-preview">The Pharisee and the Tax Collector...</p>
+            <button class="btn-read" onclick="toggleReading('gospel')">Read Full <i class="fas fa-chevron-down"></i></button>
+            <div class="reading-text" id="gospel" style="display:none">
+              <p>Jesus addressed this parable to those who were convinced of their own righteousness and despised everyone else. "Two people went up to the temple area to pray; one was a Pharisee and the other was a tax collector. The Pharisee took up his position and spoke this prayer to himself, 'O God, I thank you that I am not like the rest of humanity — greedy, dishonest, adulterous — or even like this tax collector. I fast twice a week, and I pay tithes on my whole income.' But the tax collector stood off at a distance and would not even raise his eyes to heaven but beat his breast and prayed, 'O God, be merciful to me a sinner.' I tell you, the latter went home justified, not the former; for whoever exalts himself will be humbled, and the one who humbles himself will be exalted."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reactions Bar -->
+      <div class="reactions-bar">
+        <p>Share your spirit:</p>
+        <div class="reaction-btns">
+          <button class="reaction-btn" onclick="react('🙏')" title="Pray (press 1)" aria-label="Pray">
+            <span>🙏</span><small id="count-pray">0</small>
+          </button>
+          <button class="reaction-btn" onclick="react('❤️')" title="Love (press 2)" aria-label="Love">
+            <span>❤️</span><small id="count-heart">0</small>
+          </button>
+          <button class="reaction-btn" onclick="react('✝️')" title="Praise (press 3)" aria-label="Praise">
+            <span>✝️</span><small id="count-cross">0</small>
+          </button>
+          <button class="reaction-btn" onclick="react('🕊️')" title="Peace (press 4)" aria-label="Peace">
+            <span>🕊️</span><small id="count-dove">0</small>
+          </button>
+          <button class="reaction-btn" onclick="react('🎵')" title="Sing (press 5)" aria-label="Sing">
+            <span>🎵</span><small id="count-music">0</small>
+          </button>
+        </div>
+        <div id="reactionFeed" class="reaction-feed" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <!-- Right: Login + Chat + Prayer -->
+    <div class="live-sidebar">
+
+      <!-- Login / User Panel -->
+      <div class="login-panel" id="loginPanel">
+        <div class="panel-header">
+          <i class="fas fa-user-circle"></i>
+          <h3>Join the Community</h3>
+        </div>
+        <p>Sign in to participate in the live chat and submit prayer requests.</p>
+        <div class="login-form">
+          <input type="text" id="usernameInput" placeholder="Your name" maxlength="30"
+                 aria-label="Your name" autocomplete="nickname"/>
+          <button class="btn btn-primary full-width" onclick="joinCommunity()">
+            <i class="fas fa-sign-in-alt"></i> Join Now
+          </button>
+          <button class="btn btn-outline full-width" onclick="joinAsGuest()">
+            <i class="fas fa-user"></i> Continue as Guest
+          </button>
+        </div>
+      </div>
+
+      <!-- User Joined Panel (shown after login) -->
+      <div class="user-panel" id="userPanel" style="display:none">
+        <div class="user-panel-inner">
+          <div class="user-avatar" id="userAvatar">J</div>
+          <div>
+            <strong id="userDisplayName">John</strong>
+            <span class="user-status">
+              <i class="fas fa-circle" style="color:#2ecc71;font-size:8px"></i> Online
+            </span>
+          </div>
+          <button class="icon-btn" onclick="logout()" title="Leave community" aria-label="Leave">
+            <i class="fas fa-sign-out-alt"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Community Chat -->
+      <div class="chat-panel" role="region" aria-label="Community Chat">
+        <div class="panel-header-bar">
+          <h3><i class="fas fa-comments"></i> Community Chat</h3>
+          <span class="online-count" aria-live="polite">
+            <i class="fas fa-users"></i> <span id="onlineUsers">248</span>
+          </span>
+        </div>
+        <div class="chat-messages" id="chatMessages" aria-live="polite" aria-atomic="false"></div>
+        <div class="chat-input-area">
+          <input type="text" id="chatInput" placeholder="Join to chat..." maxlength="200"
+                 disabled aria-label="Chat message" autocomplete="off"/>
+          <button class="send-btn" id="sendBtn" onclick="sendMessage()" disabled aria-label="Send message">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+        <p class="chat-note"><i class="fas fa-info-circle"></i> Be respectful and charitable in all messages.</p>
+      </div>
+
+      <!-- Prayer Request Panel -->
+      <div class="prayer-panel" id="prayer" role="region" aria-label="Prayer Requests">
+        <div class="panel-header-bar">
+          <h3><i class="fas fa-hands-praying"></i> Prayer Requests</h3>
+        </div>
+        <p class="prayer-intro">Submit your intentions and our priest will include them in the Mass prayer.</p>
+        <div class="prayer-form">
+          <input type="text" id="prayerName" placeholder="Your name (optional)" aria-label="Your name"/>
+          <textarea id="prayerText" placeholder="Your prayer intention..." rows="3"
+                    maxlength="300" aria-label="Prayer intention"></textarea>
+          <select id="prayerType" aria-label="Prayer category">
+            <option value="healing">💊 Healing &amp; Health</option>
+            <option value="family">👨‍👩‍👧 Family &amp; Relationships</option>
+            <option value="work">💼 Work &amp; Finances</option>
+            <option value="thanksgiving">🙌 Thanksgiving</option>
+            <option value="deceased">🕊️ For the Deceased</option>
+            <option value="general">✝️ General Intention</option>
+          </select>
+          <button class="btn btn-gold full-width" onclick="submitPrayer()">
+            <i class="fas fa-hands-praying"></i> Submit Prayer Request
+          </button>
+        </div>
+        <div class="prayer-list" id="prayerList" aria-live="polite"></div>
+      </div>
+
+      <!-- Upcoming Masses -->
+      <div class="upcoming-panel">
+        <div class="panel-header-bar">
+          <h3><i class="fas fa-calendar-alt"></i> Upcoming Masses</h3>
+        </div>
+        <ul class="upcoming-list">
+          <li>
+            <span class="up-date">Sun, Nov 1</span>
+            <span class="up-name">All Saints Day — 10:00 AM</span>
+            <span class="tag-live">LIVE</span>
+          </li>
+          <li>
+            <span class="up-date">Sun, Nov 8</span>
+            <span class="up-name">Sunday Mass — 9:00 AM</span>
+            <span class="tag-live">LIVE</span>
+          </li>
+          <li>
+            <span class="up-date">Sun, Nov 15</span>
+            <span class="up-name">Sunday Mass — 9:00 AM</span>
+            <span class="tag-live">LIVE</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer footer-dark">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Riabore Catholic Church &nbsp;|&nbsp; <a href="index.html">Go to Homepage</a></p>
+    </div>
+  </footer>
+
+  <!-- live.js must load before app.js on this page -->
+  <script src="live.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Riabore Catholic Church</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span><i class="fas fa-clock"></i> Sunday Mass: 7:00 AM | 9:00 AM | 11:00 AM</span>
+      <span><i class="fas fa-phone"></i> +254 700 000 000</span>
+      <a href="live.html" class="live-badge"><i class="fas fa-circle pulse-red"></i> Watch Live</a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <div class="logo">
+        <div class="logo-icon"><i class="fas fa-cross"></i></div>
+        <div class="logo-text">
+          <span class="church-name">Riabore Catholic Church</span>
+          <span class="church-sub">Diocese of Kisii</span>
+        </div>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="schedule.html">Mass Schedule</a></li>
+        <li><a href="live.html">Live Mass</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="live.html" class="btn-join">Join Online</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <!-- Particle canvas injected by app.js -->
+    <div class="hero-content">
+      <p class="hero-sub">Welcome to</p>
+      <h1>Riabore Catholic Church</h1>
+      <p class="hero-verse">"Come to me, all who are weary and burdened, and I will give you rest." — Matthew 11:28</p>
+
+      <!-- Countdown Timer -->
+      <div class="countdown-wrapper">
+        <p class="countdown-label"><i class="fas fa-satellite-dish pulse-red"></i> Next Live Sunday Mass in:</p>
+        <div id="massCountdown" class="countdown-display">
+          <div class="countdown-unit"><span>--</span><small>Days</small></div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-unit"><span>--</span><small>Hours</small></div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-unit"><span>--</span><small>Min</small></div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-unit"><span>--</span><small>Sec</small></div>
+        </div>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="live.html" class="btn btn-primary"><i class="fas fa-play-circle"></i> Join Live Mass</a>
+        <a href="about.html" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-scroll"><i class="fas fa-chevron-down"></i></div>
+  </section>
+
+  <!-- Live Mass Banner -->
+  <section class="live-banner">
+    <div class="container live-banner-inner">
+      <div class="live-icon"><i class="fas fa-broadcast-tower"></i></div>
+      <div class="live-text">
+        <h3>Can't Make It to Church? Join Us Online!</h3>
+        <p>Experience the Holy Mass live from anywhere in the world. Pray along, request prayers, and be part of our community.</p>
+      </div>
+      <a href="live.html" class="btn btn-gold">Watch Live <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- Quick Info Cards -->
+  <section class="info-section section-pad">
+    <div class="container">
+      <div class="section-header">
+        <h2>Come, Worship With Us</h2>
+        <p>Riabore Catholic Church — a home for all God's children</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-church"></i></div>
+          <h3>Holy Mass</h3>
+          <p>Join us every Sunday and weekdays for the celebration of the Eucharist. All are welcome.</p>
+          <a href="schedule.html" class="card-link">View Schedule <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-laptop"></i></div>
+          <h3>Online Mass</h3>
+          <p>Stream Sunday Mass live and participate fully with prayers, hymns, and the community chat.</p>
+          <a href="live.html" class="card-link">Join Online <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-hands-praying"></i></div>
+          <h3>Prayer Requests</h3>
+          <p>Submit your prayer intentions and our priests and community will pray with you during Mass.</p>
+          <a href="live.html#prayer" class="card-link">Request Prayer <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-users"></i></div>
+          <h3>Community</h3>
+          <p>Connect with fellow parishioners, join ministries, and grow in faith together.</p>
+          <a href="about.html" class="card-link">Our Community <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mass Times Section -->
+  <section class="mass-times section-pad bg-navy">
+    <div class="container">
+      <div class="section-header white">
+        <h2>Mass Schedule</h2>
+        <p>Join us in person or online for any of our services</p>
+      </div>
+      <div class="times-grid">
+        <div class="time-card">
+          <h3>Sunday</h3>
+          <ul>
+            <li><span>7:00 AM</span> Early Morning Mass</li>
+            <li><span>9:00 AM</span> Family Mass <span class="tag-live">LIVE</span></li>
+            <li><span>11:00 AM</span> Youth Mass</li>
+            <li><span>6:00 PM</span> Evening Mass</li>
+          </ul>
+        </div>
+        <div class="time-card">
+          <h3>Weekdays</h3>
+          <ul>
+            <li><span>6:30 AM</span> Morning Mass</li>
+            <li><span>12:15 PM</span> Midday Mass</li>
+          </ul>
+        </div>
+        <div class="time-card">
+          <h3>Saturday</h3>
+          <ul>
+            <li><span>8:00 AM</span> Morning Mass</li>
+            <li><span>5:00 PM</span> Vigil Mass</li>
+          </ul>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:2rem;">
+        <a href="live.html" class="btn btn-gold"><i class="fas fa-video"></i> Watch 9:00 AM Mass Live</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Announcements -->
+  <section class="announcements section-pad">
+    <div class="container">
+      <div class="section-header">
+        <h2>Parish Announcements</h2>
+        <p>Stay updated with what's happening at Riabore</p>
+      </div>
+      <div class="announce-list">
+        <div class="announce-item">
+          <div class="announce-date"><span>28</span>OCT</div>
+          <div class="announce-body">
+            <h4>All Saints Day Mass — November 1st</h4>
+            <p>Special Mass on the Solemnity of All Saints. 7:00 AM, 10:00 AM and 6:00 PM. Join us also online!</p>
+          </div>
+        </div>
+        <div class="announce-item">
+          <div class="announce-date"><span>25</span>OCT</div>
+          <div class="announce-body">
+            <h4>Confession Hours — Every Saturday</h4>
+            <p>The Sacrament of Reconciliation is available every Saturday from 4:00 PM – 4:45 PM before Vigil Mass.</p>
+          </div>
+        </div>
+        <div class="announce-item">
+          <div class="announce-date"><span>20</span>OCT</div>
+          <div class="announce-body">
+            <h4>Youth Group Meeting</h4>
+            <p>All youth are invited to the monthly faith-sharing meeting every last Sunday at 2:00 PM in the parish hall.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="section-pad bg-light" id="newsletterSection">
+    <div class="container">
+      <div class="newsletter-box">
+        <div class="newsletter-text">
+          <i class="fas fa-envelope-open-text"></i>
+          <h3>Stay Connected</h3>
+          <p>Subscribe to receive Mass reminders, announcements, and parish news directly to your inbox.</p>
+        </div>
+        <form class="newsletter-form" novalidate>
+          <input type="email" placeholder="Enter your email address" required aria-label="Email address"/>
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container cta-inner">
+      <div class="cta-text">
+        <h2>Can't Be Here Physically?</h2>
+        <p>Our online platform brings the Mass to your screen. Participate in real time — follow the readings, sing hymns, submit prayer requests, and chat with the community.</p>
+      </div>
+      <a href="live.html" class="btn btn-primary btn-lg"><i class="fas fa-satellite-dish"></i> Enter Live Mass Platform</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="logo">
+          <div class="logo-icon"><i class="fas fa-cross"></i></div>
+          <div class="logo-text">
+            <span class="church-name">Riabore Catholic Church</span>
+            <span class="church-sub">Diocese of Kisii</span>
+          </div>
+        </div>
+        <p class="footer-desc">A community rooted in faith, united in love, and called to serve.</p>
+        <div class="social-links">
+          <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="schedule.html">Mass Schedule</a></li>
+          <li><a href="live.html">Live Mass</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Mass Times</h4>
+        <ul>
+          <li>Sunday: 7AM | 9AM | 11AM | 6PM</li>
+          <li>Weekdays: 6:30AM | 12:15PM</li>
+          <li>Saturday: 8AM | 5PM</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Riabore, Kisii County, Kenya</li>
+          <li><i class="fas fa-phone"></i> +254 700 000 000</li>
+          <li><i class="fas fa-envelope"></i> info@riaborecatholic.org</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Riabore Catholic Church. All rights reserved. | Built with <i class="fas fa-heart" style="color:#c9a84c"></i> for the Glory of God</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

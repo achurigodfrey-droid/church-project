@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us — Riabore Catholic Church</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <div class="logo">
+        <div class="logo-icon"><i class="fas fa-cross"></i></div>
+        <div class="logo-text">
+          <span class="church-name">Riabore Catholic Church</span>
+          <span class="church-sub">Diocese of Kisii</span>
+        </div>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="schedule.html">Mass Schedule</a></li>
+        <li><a href="live.html">Live Mass</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="live.html" class="btn-join">Join Online</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="page-header-overlay"></div>
+    <div class="container">
+      <h1>About Our Parish</h1>
+      <p>Rooted in faith. United in love. Called to serve.</p>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>About Us</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Parish Stats -->
+  <section class="stats-bar bg-navy">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <div class="stat-number" data-target="4500" data-suffix="+">0</div>
+        <div class="stat-label">Parishioners</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="60" data-suffix="+ yrs">0</div>
+        <div class="stat-label">Years of Faith</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="12" data-suffix="">0</div>
+        <div class="stat-label">Active Ministries</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="800" data-suffix="+">0</div>
+        <div class="stat-label">Online Viewers</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="section-pad">
+    <div class="container two-col">
+      <div class="col-text">
+        <div class="section-label">Our History</div>
+        <h2>A Parish Born from Faith</h2>
+        <p>Riabore Catholic Church was founded in the heart of Kisii County, Kenya, as a beacon of faith and service to the local community. Over the decades, the parish has grown from a small mission chapel into a thriving community of thousands of faithful Catholics.</p>
+        <p>Under the spiritual care of the Diocese of Kisii, Riabore has been a center of evangelization, education, social welfare, and worship. From the early missionaries who planted the seed of faith to the parishioners who nurture it today — the story of Riabore is a story of God's grace at work.</p>
+        <p>We are committed to ensuring that everyone, whether present physically or joining us remotely from across the world, feels at home in our parish family.</p>
+      </div>
+      <div class="col-image">
+        <div class="image-placeholder church-img">
+          <i class="fas fa-church"></i>
+          <p>Riabore Catholic Church</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="section-pad bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Mission &amp; Vision</h2>
+        <p>Guided by the Gospel of Jesus Christ</p>
+      </div>
+      <div class="mv-grid">
+        <div class="mv-card">
+          <div class="mv-icon"><i class="fas fa-bullseye"></i></div>
+          <h3>Our Mission</h3>
+          <p>To proclaim the Good News of Jesus Christ, celebrate the sacraments, and serve the people of God with love, justice, and compassion — in person and through digital outreach.</p>
+        </div>
+        <div class="mv-card">
+          <div class="mv-icon"><i class="fas fa-eye"></i></div>
+          <h3>Our Vision</h3>
+          <p>A dynamic, welcoming Catholic community where every person encounters the living God, grows in discipleship, and reaches out to others in service and love.</p>
+        </div>
+        <div class="mv-card">
+          <div class="mv-icon"><i class="fas fa-heart"></i></div>
+          <h3>Our Values</h3>
+          <p>Faith, Community, Service, Dignity, Inclusivity, and the Eucharist as the source and summit of Christian life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parish Priests -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Clergy</h2>
+        <p>Shepherds of the Riabore Parish Family</p>
+      </div>
+      <div class="priests-grid">
+        <div class="priest-card">
+          <div class="priest-avatar"><i class="fas fa-user-tie"></i></div>
+          <h3>Fr. John Omondi</h3>
+          <span class="priest-role">Parish Priest</span>
+          <p>Fr. John has served Riabore Parish for over 15 years, leading the community with humility and dedication to pastoral care.</p>
+          <button class="btn-contact-priest" onclick="window.location='contact.html'">
+            <i class="fas fa-envelope"></i> Send Message
+          </button>
+        </div>
+        <div class="priest-card">
+          <div class="priest-avatar"><i class="fas fa-user-tie"></i></div>
+          <h3>Fr. Peter Otieno</h3>
+          <span class="priest-role">Associate Pastor</span>
+          <p>Fr. Peter leads the youth ministry and RCIA program, bringing energy and vision to the faith formation of young parishioners.</p>
+          <button class="btn-contact-priest" onclick="window.location='contact.html'">
+            <i class="fas fa-envelope"></i> Send Message
+          </button>
+        </div>
+        <div class="priest-card">
+          <div class="priest-avatar"><i class="fas fa-user-tie"></i></div>
+          <h3>Deacon Samuel Mogaka</h3>
+          <span class="priest-role">Permanent Deacon</span>
+          <p>Deacon Samuel coordinates parish outreach programs, visiting the sick and bringing the sacraments to the homebound.</p>
+          <button class="btn-contact-priest" onclick="window.location='contact.html'">
+            <i class="fas fa-envelope"></i> Send Message
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ministries — each card gets a "Join Ministry" button from app.js -->
+  <section class="section-pad bg-navy">
+    <div class="container">
+      <div class="section-header white">
+        <h2>Parish Ministries</h2>
+        <p>Get involved and grow in your faith journey — click <em>Join Ministry</em> to express your interest</p>
+      </div>
+      <div class="ministry-grid">
+        <div class="ministry-item">
+          <i class="fas fa-music"></i>
+          <h4>Choir Ministry</h4>
+          <p>Leading the parish in worship through song</p>
+        </div>
+        <div class="ministry-item">
+          <i class="fas fa-child"></i>
+          <h4>Youth Ministry</h4>
+          <p>Empowering young Catholics in faith &amp; life</p>
+        </div>
+        <div class="ministry-item">
+          <i class="fas fa-hands-helping"></i>
+          <h4>Outreach &amp; Charity</h4>
+          <p>Serving the poor and marginalized</p>
+        </div>
+        <div class="ministry-item">
+          <i class="fas fa-book-open"></i>
+          <h4>Bible Study</h4>
+          <p>Deepening knowledge of God's Word</p>
+        </div>
+        <div class="ministry-item">
+          <i class="fas fa-female"></i>
+          <h4>Women's Group</h4>
+          <p>Catholic Women's League — faith and fellowship</p>
+        </div>
+        <div class="ministry-item">
+          <i class="fas fa-broadcast-tower"></i>
+          <h4>Media Ministry</h4>
+          <p>Streaming Mass and digital evangelization</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container cta-inner">
+      <div class="cta-text">
+        <h2>Join Our Parish Family</h2>
+        <p>Whether you are here in Riabore or watching from afar, you belong here. Join us for our next Live Mass online.</p>
+      </div>
+      <a href="live.html" class="btn btn-primary btn-lg"><i class="fas fa-satellite-dish"></i> Watch Live Mass</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="logo">
+          <div class="logo-icon"><i class="fas fa-cross"></i></div>
+          <div class="logo-text">
+            <span class="church-name">Riabore Catholic Church</span>
+            <span class="church-sub">Diocese of Kisii</span>
+          </div>
+        </div>
+        <p class="footer-desc">A community rooted in faith, united in love, and called to serve.</p>
+        <div class="social-links">
+          <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="schedule.html">Mass Schedule</a></li>
+          <li><a href="live.html">Live Mass</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Riabore, Kisii County, Kenya</li>
+          <li><i class="fas fa-phone"></i> +254 700 000 000</li>
+          <li><i class="fas fa-envelope"></i> info@riaborecatholic.org</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Riabore Catholic Church. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
